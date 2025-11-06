@@ -632,4 +632,257 @@
                     <h3>HTML</h3>
                     <p>Semantic markup and modern HTML5 features for building structured web content.</p>
                 </div>
-                <div class="skill-card 
+                                <div class="skill-card fade-in">
+                    <div class="skill-icon">🎨</div>
+                    <h3>CSS</h3>
+                    <p>Advanced styling with Flexbox, Grid, animations, and responsive design principles.</p>
+                </div>
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">⚡</div>
+                    <h3>JavaScript</h3>
+                    <p>Interactive web development with ES6+, DOM manipulation, and modern JavaScript features.</p>
+                </div>
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">⚙️</div>
+                    <h3>C Language</h3>
+                    <p>System programming, data structures, and algorithmic problem solving.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section-light">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>My Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-image">🧮</div>
+                    <div class="project-content">
+                        <h3>Interactive Calculator</h3>
+                        <p>A fully functional calculator with a sleek design, supporting basic arithmetic operations with keyboard and mouse input.</p>
+                        <div class="project-tech">
+                           <a class="main" href="https://share.evernote.com/note/646e544f-6957-d9d9-2e84-c96a9fc0512f">HTML</a>
+                          <a class="main" href="https://share.evernote.com/note/83884a37-e536-f231-87c2-adddd0d51c98">CSS</a>
+                          <a class="main" href="https://share.evernote.com/note/b0104477-8882-815e-799d-f1133a6e0e2b">JAVASCRIPT</a>
+                        </div>
+                        <a href="https://armorx00.github.io/calculation/" class="project-link">View Project</a>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-image">⭕</div>
+                    <div class="project-content">
+                        <h3>Tic-Tac-Toe Game</h3>
+                        <p>Classic tic-tac-toe game with smooth animations, win detection, and score tracking for two players.</p>
+                        <div class="project-tech">
+                            <a class="main" href="https://share.evernote.com/note/fbe80295-2f87-313c-626e-1be7ed8c8711">HTML</a>
+                          <a class="main" href="https://share.evernote.com/note/0a017734-a72d-e586-3449-4ba68e417cb4">CSS</a>
+                          <a class="main" href="https://share.evernote.com/note/2f87cc4c-9d81-58ef-d8fd-5cecdceed4bf">JAVASCRIPT</a>
+                        </div>
+                        <a href="https://armorx00.github.io/Game/" class="project-link">View Project</a>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-image">✂️</div>
+                    <div class="project-content">
+                        <h3>Stone Paper Scissors</h3>
+                        <p>Interactive rock-paper-scissors game with animated choices, computer AI, and dynamic scoring system.</p>
+                        <div class="project-tech">
+                            <a class="main" href="https://share.evernote.com/note/402a905b-46a8-7bd4-eea8-1b9d07782149">HTML</a>
+                          <a class="main" href="https://share.evernote.com/note/5a66c655-f5ec-3af4-5e21-6831610a83c3">CSS</a>
+                          <a class="main" href="https://share.evernote.com/note/ba62a35d-73e8-fe58-fd23-5155b9f5e967">JAVASCRIPT</a>
+                        </div>
+                        <a href="https://armorx00.github.io/Stone-paper-scissor/" class="project-link">View Project</a>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-image">📝</div>
+                    <div class="project-content">
+                        <h3>Note Taking App</h3>
+                        <p>A desktop note-taking application with rich text editing, search functionality, and organized note management.</p>
+                        <div class="project-tech">
+                           <a class="main" href="https://share.evernote.com/note/a26f3f70-3431-6c97-22d0-74393daf3e05">HTML</a>
+                          <a class="main" href="https://share.evernote.com/note/bd05ba15-3340-362f-9321-f97f6b02f50e">CSS</a>
+                          <a class="main" href="https://share.evernote.com/note/7b206343-ec8d-47df-be04-a23d96a69b9f">JAVASCRIPT</a>
+                        </div>
+                        <a href="https://armorx00.github.io/To-Do-List/" class="project-link">View Project</a>
+                    </div> 
+                </div>
+       <div class="project-card fade-in">
+                    <div class="project-image">🔒</div>
+                    <div class="project-content">
+                        <h3>Password Generator</h3>
+                        <p>Classic P@ssword Generator smooth animations,select length,select cases,and see how strong password is.</p>
+                        <div class="project-tech">
+                            <a class="main" href="https://share.evernote.com/note/673a0ca7-1c37-751c-4f7d-0a16062dadb3">HTML</a>
+                          <a class="main" href="https://share.evernote.com/note/66f6fee8-73fb-37df-9076-d305a2aaee50">CSS</a>
+                          <a class="main" href="https://share.evernote.com/note/e4efb076-aea5-4e75-044e-2ea47d4f505d">JAVASCRIPT</a>
+                        </div>
+                        <a href="https://armorx00.github.io/Password-generator-/" class="project-link">View Project</a>
+                    </div>
+                </div>
+  <div class="project-card fade-in">
+                    <div class="project-image">⏳</div>
+                    <div class="project-content">
+                        <h3>Coming Soon...</h3>
+                        <p>$$$$$$$$$$ $$$$$$$$$$$$ $$$$$$$$$$$$$ $$$$$$$$$$$$$$ $$$$$$$$$$$$$ $$$$$$$$$$$$$ $$$$$$$$$$$$ $$$$$$$$$$ $$$$$$$$$</p>
+                        <div class="project-tech">
+                            <a class="main" href="#">HTML</a>
+                          <a class="main" href="#">CSS</a>
+                          <a class="main" href="#">JAVASCRIPT</a>
+                        </div>
+                        <a href="#" class="project-link">View Project</a>
+                    </div>
+                </div>
+
+    </section>
+
+    <section id="contact" class="section-dark">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Get In Touch</h2>
+            </div>
+            <div class="contact-content fade-in">
+                <p>I'm always open to discussing new opportunities, collaborations, or just having a chat about technology!</p>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+
+        // Project cards hover effect
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) rotateX(5deg)';
+            });
+
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) rotateX(0deg)';
+            });
+        });
+
+        // Skill cards pulse animation
+        document.querySelectorAll('.skill-card').forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.2}s`;
+        });
+
+        // Contact form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const submitBtn = this.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+
+            submitBtn.textContent = 'Sending...';
+            submitBtn.style.background = '#28a745';
+
+            setTimeout(() => {
+                submitBtn.textContent = 'Message Sent!';
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.style.background = 'linear-gradient(45deg, #667eea, #764ba2)';
+                    this.reset();
+                }, 2000);
+            }, 1000);
+        });
+
+        // Add floating particles effect
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.style.cssText = `
+                position: fixed;
+                width: 4px;
+                height: 4px;
+                background: rgba(255, 255, 255, 0.5);
+                border-radius: 50%;
+                pointer-events: none;
+                animation: float 6s linear infinite;
+                left: ${Math.random() * 100}vw;
+                top: 100vh;
+                z-index: 1;
+            `;
+
+            document.body.appendChild(particle);
+
+            setTimeout(() => {
+                particle.remove();
+            }, 6000);
+        }
+
+        // Add CSS animation for particles
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes float {
+                to {
+                    transform: translateY(-100vh) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Create particles periodically
+        setInterval(createParticle, 300);
+    </script>
+</body>
+</html>
