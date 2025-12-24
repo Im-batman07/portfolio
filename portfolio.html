@@ -1,7 +1,204 @@
-<html>
-  <head>IAMANKIT</head>
-  <body>
-    <h1>hello</h1>
-  
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ArmorX00 | Web Developer</title>
+
+  <!-- ========== CSS ========== -->
+  <style>
+    :root{
+      --bg:#000000;
+      --card:#0b0b0b;
+      --primary:#00e5ff;
+      --secondary:#7c4dff;
+      --text:#e5e5e5;
+      --muted:#9ca3af;
+      --glow:0 0 25px rgba(0,229,255,.35);
+    }
+
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,system-ui,sans-serif}
+
+    body{
+      background:var(--bg);
+      color:var(--text);
+      overflow-x:hidden;
+    }
+
+    /* ===== Loader ===== */
+    #loader{
+      position:fixed;inset:0;background:#000;display:flex;align-items:center;justify-content:center;z-index:9999
+    }
+    #loader span{
+      font-size:6rem;font-weight:900;color:var(--primary);
+      animation:spin 2s linear infinite;
+      text-shadow:var(--glow)
+    }
+    @keyframes spin{to{transform:rotateY(360deg)}}
+
+    /* ===== Layout ===== */
+    header{
+      padding:4rem 1.5rem;text-align:center
+    }
+    header h1{
+      font-size:3rem;color:var(--primary)
+    }
+    header p{color:var(--muted);margin-top:.6rem}
+
+    section{padding:4rem 1.5rem;max-width:1100px;margin:auto}
+    h2{margin-bottom:1.5rem;color:var(--secondary)}
+
+    /* ===== Cards ===== */
+    .grid{display:grid;gap:1.5rem}
+    .grid-3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+
+    .card{
+      background:var(--card);border-radius:18px;padding:1.5rem;
+      box-shadow:0 20px 40px rgba(0,0,0,.6);
+      transform-style:preserve-3d;transition:.4s
+    }
+    .card:hover{
+      transform:rotateX(6deg) rotateY(-6deg) translateY(-6px);
+      box-shadow:var(--glow)
+    }
+
+    /* ===== Skills ===== */
+    .skills span{
+      display:inline-block;margin:.4rem;padding:.4rem .8rem;
+      border:1px solid var(--primary);border-radius:999px;font-size:.85rem
+    }
+
+    /* ===== Projects ===== */
+    .project a{color:var(--primary);text-decoration:none;font-size:.9rem}
+
+    /* ===== Contact ===== */
+    .contact p{margin:.4rem 0}
+
+    /* ===== Chatbot ===== */
+    #chatbot{
+      position:fixed;bottom:20px;right:20px;width:320px;
+      background:#050505;border-radius:16px;overflow:hidden;box-shadow:var(--glow)
+    }
+    #chatbot header{padding:.8rem;font-size:.9rem}
+    #chat{height:260px;overflow-y:auto;padding:1rem;font-size:.85rem}
+    #chat div{margin-bottom:.6rem}
+    #chat .bot{color:var(--primary)}
+    #chat .user{text-align:right;color:#fff}
+    #chatbot input{
+      width:100%;border:none;padding:.8rem;background:#000;color:#fff
+    }
+    #chatbot input:focus{outline:none}
+
+    /* ===== Footer ===== */
+    footer{text-align:center;padding:2rem;color:var(--muted);font-size:.85rem}
+  </style>
+</head>
+<body>
+
+  <!-- Loader -->
+  <div id="loader"><span>A</span></div>
+
+  <!-- Header -->
+  <header>
+    <h1>ArmorX00</h1>
+    <p>Web Developer • Dark UI Lover • Problem Solver</p>
+  </header>
+
+  <!-- About -->
+  <section>
+    <h2>About Me</h2>
+    <div class="card">
+      <p>
+        I'm a web developer focused on building fast, clean and interactive websites.
+        I work mainly with HTML, CSS, JavaScript and Python, and I understand core programming
+        concepts through C and C++.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section>
+    <h2>Skills</h2>
+    <div class="card skills">
+      <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span>
+      <span>C</span><span>C++</span><span>Responsive Design</span><span>UI/UX</span>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section>
+    <h2>Projects</h2>
+    <div class="grid grid-3">
+      <div class="card project">Project One<br><a href="#">Link later</a></div>
+      <div class="card project">Project Two<br><a href="#">Link later</a></div>
+      <div class="card project">Project Three<br><a href="#">Link later</a></div>
+      <div class="card project">Project Four<br><a href="#">Link later</a></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p>Email: <strong>yourmail@gmail.com</strong></p>
+      <p>Open to freelance & collaborations</p>
+    </div>
+  </section>
+
+  <!-- Google Form -->
+  <section>
+    <h2>Send Message</h2>
+    <div class="card">
+      <!-- Replace src with your Google Form embed link -->
+      <iframe src="https://docs.google.com/forms/d/e/FORM_ID/viewform?embedded=true"
+        width="100%" height="520" frameborder="0">Loading…</iframe>
+    </div>
+  </section>
+
+  <!-- Chatbot -->
+  <div id="chatbot">
+    <header>Ask me anything 🤖</header>
+    <div id="chat"></div>
+    <input id="input" placeholder="Type here..." />
+  </div>
+
+  <footer>© 2025 ArmorX00 • Built with pure HTML, CSS & JS</footer>
+
+  <!-- ========== JS ========== -->
+  <script>
+    // Loader
+    window.addEventListener('load',()=>{
+      document.getElementById('loader').style.display='none'
+    })
+
+    // Simple chatbot (no API)
+    const chat=document.getElementById('chat')
+    const input=document.getElementById('input')
+
+    const replies=[
+      {q:['hi','hello'],a:'Hey 👋 How can I help you?'},
+      {q:['skills'],a:'I work with HTML, CSS, JavaScript, Python, C and C++.'},
+      {q:['projects'],a:'Check the projects section above 🚀'},
+      {q:['contact','email'],a:'You can contact me via email or the form below.'},
+    ]
+
+    input.addEventListener('keydown',e=>{
+      if(e.key==='Enter' && input.value.trim()){
+        const msg=input.value.toLowerCase()
+        chat.innerHTML+=`<div class='user'>${input.value}</div>`
+        let found=false
+        replies.forEach(r=>{
+          if(r.q.some(k=>msg.includes(k))){
+            chat.innerHTML+=`<div class='bot'>${r.a}</div>`
+            found=true
+          }
+        })
+        if(!found) chat.innerHTML+=`<div class='bot'>I'm a simple bot 🤖 Try asking about skills, projects or contact.</div>`
+        input.value=''
+        chat.scrollTop=chat.scrollHeight
+      }
+    })
+  </script>
+
+</body>
 </html>
