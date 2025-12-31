@@ -578,7 +578,7 @@
 
   <!-- Projects Section -->
  <section id="skills">
-        <h2>My Skills</h2>
+        <h2>My Projects</h2>
         <div class="skills-grid">
             <div class="skill-card" data-lang="html">
                 <h3>HTML</h3>
@@ -602,6 +602,100 @@
             </div>
         </div>
     </section>
+
+   <div id="projectsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">My Projects</h2>
+                <button class="close-btn" onclick="closeModal()">✕ Close</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">🧮</div>
+                    <div class="project-content">
+                        <h3>Calculator App</h3>
+                        <p>Functional calculator with sleek design and keyboard support.</p>
+                        <div class="tech-badges">
+                            <span class="tech-badge html-badge" onclick="openTechLink('html'); event.stopPropagation();">HTML</span>
+                            <span class="tech-badge css-badge" onclick="openTechLink('css'); event.stopPropagation();">CSS</span>
+                            <span class="tech-badge js-badge" onclick="openTechLink('js'); event.stopPropagation();">JS</span>
+                        </div>
+                        <a href="#" class="project-link" onclick="openProject('calculator'); return false;">View Project →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">⭕</div>
+                    <div class="project-content">
+                        <h3>Tic Tac Toe Game</h3>
+                        <p>Classic game with smooth animations and score tracking.</p>
+                        <div class="tech-badges">
+                            <span class="tech-badge html-badge" onclick="openTechLink('html'); event.stopPropagation();">HTML</span>
+                            <span class="tech-badge css-badge" onclick="openTechLink('css'); event.stopPropagation();">CSS</span>
+                            <span class="tech-badge js-badge" onclick="openTechLink('js'); event.stopPropagation();">JS</span>
+                        </div>
+                        <a href="#" class="project-link" onclick="openProject('tictactoe'); return false;">View Project →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">✂️</div>
+                    <div class="project-content">
+                        <h3>Rock Paper Scissors</h3>
+                        <p>Interactive game with AI and dynamic scoring system.</p>
+                        <div class="tech-badges">
+                            <span class="tech-badge html-badge" onclick="openTechLink('html'); event.stopPropagation();">HTML</span>
+                            <span class="tech-badge css-badge" onclick="openTechLink('css'); event.stopPropagation();">CSS</span>
+                            <span class="tech-badge js-badge" onclick="openTechLink('js'); event.stopPropagation();">JS</span>
+                        </div>
+                        <a href="#" class="project-link" onclick="openProject('rps'); return false;">View Project →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">📝</div>
+                    <div class="project-content">
+                        <h3>Notes Application</h3>
+                        <p>Desktop note-taking app with search functionality.</p>
+                        <div class="tech-badges">
+                            <span class="tech-badge html-badge" onclick="openTechLink('html'); event.stopPropagation();">HTML</span>
+                            <span class="tech-badge css-badge" onclick="openTechLink('css'); event.stopPropagation();">CSS</span>
+                            <span class="tech-badge js-badge" onclick="openTechLink('js'); event.stopPropagation();">JS</span>
+                        </div>
+                        <a href="#" class="project-link" onclick="openProject('notes'); return false;">View Project →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">🔐</div>
+                    <div class="project-content">
+                        <h3>Password Generator</h3>
+                        <p>Generator with strength indicator and customization.</p>
+                        <div class="tech-badges">
+                            <span class="tech-badge html-badge" onclick="openTechLink('html'); event.stopPropagation();">HTML</span>
+                            <span class="tech-badge css-badge" onclick="openTechLink('css'); event.stopPropagation();">CSS</span>
+                            <span class="tech-badge js-badge" onclick="openTechLink('js'); event.stopPropagation();">JS</span>
+                        </div>
+                        <a href="#" class="project-link" onclick="openProject('password'); return false;">View Project →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">🌐</div>
+                    <div class="project-content">
+                        <h3>Portfolio Website</h3>
+                        <p>Modern responsive portfolio with smooth animations.</p>
+                        <div class="tech-badges">
+                            <span class="tech-badge html-badge" onclick="openTechLink('html'); event.stopPropagation();">HTML</span>
+                            <span class="tech-badge css-badge" onclick="openTechLink('css'); event.stopPropagation();">CSS</span>
+                            <span class="tech-badge js-badge" onclick="openTechLink('js'); event.stopPropagation();">JS</span>
+                        </div>
+                        <a href="https://armorx00.vercel.app" target="_blank" class="project-link">View Project →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
   <!-- Contact & Form Section -->
