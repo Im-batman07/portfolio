@@ -287,6 +287,280 @@
         .skill-card:hover p {
             color: #ffffff;
         }
+     /* Projects Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            overflow-y: auto;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal.active {
+            display: block;
+        }
+
+        .modal-content {
+            padding: 6rem 5% 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .modal-header h2 {
+            margin: 0;
+        }
+
+        .close-btn {
+            background: rgba(255, 0, 0, 0.2);
+            border: 2px solid #ff0000;
+            color: #ff0000;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .close-btn:hover {
+            background: rgba(255, 0, 0, 0.4);
+            transform: scale(1.05);
+        }
+
+        /* Projects Grid - 4 per row */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            border-radius: 15px;
+            overflow: hidden;
+            border: 2px solid;
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        /* Different color schemes for each project */
+        .project-card:nth-child(1) {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(26, 26, 26, 0.8));
+            border-color: #ffffff;
+        }
+
+        .project-card:nth-child(1):hover {
+            transform: translateY(-8px);
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            box-shadow: 0 15px 50px rgba(59, 130, 246, 0.5);
+            border-color: #3b82f6;
+        }
+
+        .project-card:nth-child(2) {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.8), rgba(0, 0, 0, 0.8));
+            border-color: #ffffff;
+        }
+
+        .project-card:nth-child(2):hover {
+            transform: translateY(-8px);
+            background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+            box-shadow: 0 15px 50px rgba(29, 78, 216, 0.5);
+            border-color: #1d4ed8;
+        }
+
+        .project-card:nth-child(3) {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(26, 26, 26, 0.8));
+            border-color: #ffffff;
+        }
+
+        .project-card:nth-child(3):hover {
+            transform: translateY(-8px);
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            box-shadow: 0 15px 50px rgba(59, 130, 246, 0.5);
+            border-color: #3b82f6;
+        }
+
+        .project-card:nth-child(4) {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.8), rgba(0, 0, 0, 0.8));
+            border-color: #ffffff;
+        }
+
+        .project-card:nth-child(4):hover {
+            transform: translateY(-8px);
+            background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+            box-shadow: 0 15px 50px rgba(29, 78, 216, 0.5);
+            border-color: #1d4ed8;
+        }
+
+        .project-card:nth-child(5) {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(26, 26, 26, 0.8));
+            border-color: #ffffff;
+        }
+
+        .project-card:nth-child(5):hover {
+            transform: translateY(-8px);
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            box-shadow: 0 15px 50px rgba(59, 130, 246, 0.5);
+            border-color: #3b82f6;
+        }
+
+        .project-card:nth-child(6) {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.8), rgba(0, 0, 0, 0.8));
+            border-color: #ffffff;
+        }
+
+        .project-card:nth-child(6):hover {
+            transform: translateY(-8px);
+            background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+            box-shadow: 0 15px 50px rgba(29, 78, 216, 0.5);
+            border-color: #1d4ed8;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            background: rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover .project-image {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .project-content {
+            padding: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover .project-content {
+            color: #ffffff;
+        }
+
+        .project-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            transition: all 0.3s ease;
+            color: #ffffff;
+        }
+
+        .project-card:nth-child(1) h3 { color: #ffffff; }
+        .project-card:nth-child(2) h3 { color: #ffffff; }
+        .project-card:nth-child(3) h3 { color: #ffffff; }
+        .project-card:nth-child(4) h3 { color: #ffffff; }
+        .project-card:nth-child(5) h3 { color: #ffffff; }
+        .project-card:nth-child(6) h3 { color: #ffffff; }
+
+        .project-card:hover h3 {
+            color: #1a1a2e;
+        }
+
+        .project-content p {
+            color: #cccccc;
+            font-size: 0.85rem;
+            line-height: 1.4;
+            margin-bottom: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover p {
+            color: #ffffff;
+        }
+
+        .tech-badges {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .tech-badge {
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid;
+        }
+
+        .tech-badge.html-badge {
+            background: rgba(227, 76, 38, 0.2);
+            color: #e34c26;
+            border-color: #e34c26;
+        }
+
+        .tech-badge.html-badge:hover {
+            background: #e34c26;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .tech-badge.css-badge {
+            background: rgba(38, 77, 228, 0.2);
+            color: #264de4;
+            border-color: #264de4;
+        }
+
+        .tech-badge.css-badge:hover {
+            background: #264de4;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .tech-badge.js-badge {
+            background: rgba(240, 219, 79, 0.2);
+            color: #f0db4f;
+            border-color: #f0db4f;
+        }
+
+        .tech-badge.js-badge:hover {
+            background: #f0db4f;
+            color: #1a1a2e;
+            transform: scale(1.1);
+        }
+
+        .project-card:hover .tech-badge {
+            border-width: 2px;
+        }
+
+        .project-link {
+            display: inline-block;
+            padding: 0.5rem 1.2rem;
+            color: #000;
+            background: #ffffff;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            border: 2px solid #ffffff;
+        }
+
+        .project-card:hover .project-link {
+            background: transparent;
+            color: #ffffff;
+            border-color: #ffffff;
+        }
+
+        .project-link:hover {
+            transform: translateX(5px);
+        }
+
 
     /* Contact & Form */
     .contact-container {
