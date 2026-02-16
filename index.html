@@ -1,95 +1,76 @@
+<!-- This file includes mew responsive design improvements with media queries for mobile, tablet, and desktop -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
+        /* Base styles for all devices */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
-        header {
+        header, footer {
             background-color: #333;
             color: white;
-            padding: 1rem;
             text-align: center;
+            padding: 1em 0;
         }
-        nav {
-            margin: 1rem 0;
+        main {
+            padding: 20px;
         }
-        nav a {
-            color: white;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-        }
-        /* Base Styles */
-        section {
-            padding: 1rem;
-            margin: 1rem 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        h1, h2, h3 {
-            margin: 0.5rem 0;
-        }
-        /* Responsive Styles */
+        /* Mobile styles */
         @media (max-width: 600px) {
-            body {
+            h1 {
+                font-size: 24px;
+            }
+            p {
                 font-size: 14px;
             }
-            nav a {
-                display: block;
-                margin: 0.5rem 0;
+            .container {
+                padding: 10px;
             }
         }
+        /* Tablet styles */
         @media (min-width: 601px) and (max-width: 900px) {
-            body {
+            h1 {
+                font-size: 32px;
+            }
+            p {
                 font-size: 16px;
             }
-            section {
-                margin: 1.5rem 0;
+            .container {
+                padding: 15px;
             }
         }
-        @media (min-width: 901px) and (max-width: 1200px) {
-            body {
+        /* Desktop styles */
+        @media (min-width: 901px) {
+            h1 {
+                font-size: 40px;
+            }
+            p {
                 font-size: 18px;
             }
-            section {
-                padding: 2rem;
-            }
-        }
-        @media (min-width: 1201px) {
-            body {
-                font-size: 20px;
-            }
-            section {
-                padding: 2.5rem;
+            .container {
+                padding: 20px;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Portfolio</h1>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <h1>My Portfolio</h1>
     </header>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>This section can include a brief introduction about yourself.</p>
-    </section>
-    <section id="projects">
-        <h2>My Projects</h2>
-        <p>Include details about your projects here.</p>
-    </section>
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Provide contact details or a form here.</p>
-    </section>
+    <main>
+        <div class="container">
+            <p>Welcome to my personal portfolio! Here you'll find all my projects and experiences.</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Im-batman07</p>
+    </footer>
 </body>
 </html>
