@@ -1542,7 +1542,7 @@
    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfXogBSlRhcMe901QKoJmc_DJq3_FbHwb7r4HqH4sU4BydP-Q/viewform?embedded=true" width="640" height="1107" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
  </div>
 
-  <section class="contact-section">
+  <!-- <section class="contact-section">
 
     <div class="contact-form">
 
@@ -1554,7 +1554,7 @@
         <form id="contactForm">
 
             <!-- Email -->
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label for="email">
                     Email <span>*</span>
                 </label>
@@ -1566,11 +1566,11 @@
                     placeholder="Enter your email"
                     required
                 >
-            </div>
+            </div> -->
 
 
             <!-- Name -->
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label for="name">
                     Name <span>*</span>
                 </label>
@@ -1582,11 +1582,11 @@
                     placeholder="Enter your name"
                     required
                 >
-            </div>
+            </div> -->
 
 
             <!-- Requirements -->
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label for="requirements">
                     Requirements <span>*</span>
                 </label>
@@ -1598,11 +1598,11 @@
                     rows="6"
                     required
                 ></textarea>
-            </div>
+            </div> -->
 
 
             <!-- Satisfaction -->
-            <div class="form-group">
+            <!-- <div class="form-group">
 
                 <label>
                     Satisfaction <span>*</span>
@@ -1663,26 +1663,26 @@
 
                 </div>
 
-            </div>
+            </div> -->
 
 
             <!-- Submit -->
-            <button
+            <!-- <button
                 type="submit"
                 id="submitButton"
             >
                 Submit
-            </button>
+            </button> -->
 
 
             <!-- Message -->
-            <p id="formMessage"></p>
+            <!-- <p id="formMessage"></p>
 
         </form>
 
     </div>
 
-</section>
+</section> --> -->
 
   <!-- Chatbot Widget -->
   <div class="chatbot-widget">
@@ -1886,128 +1886,128 @@
       if (modal) modal.classList.remove('active');
     }
 //contact form
-    const contactForm = document.getElementById("contactForm");
+//     const contactForm = document.getElementById("contactForm");
 
-const submitButton = document.getElementById("submitButton");
+// const submitButton = document.getElementById("submitButton");
 
-const formMessage = document.getElementById("formMessage");
-
-
-contactForm.addEventListener("submit", function (event) {
-
-    event.preventDefault();
+// const formMessage = document.getElementById("formMessage");
 
 
-    /* Get values */
+// contactForm.addEventListener("submit", function (event) {
 
-    const email =
-        document.getElementById("email").value.trim();
-
-    const name =
-        document.getElementById("name").value.trim();
-
-    const requirements =
-        document.getElementById("requirements").value.trim();
-
-    const selectedRating =
-        document.querySelector(
-            'input[name="satisfaction"]:checked'
-        );
+//     event.preventDefault();
 
 
-    /* Check rating */
+//     /* Get values */
 
-    if (!selectedRating) {
+//     const email =
+//         document.getElementById("email").value.trim();
 
-        formMessage.textContent =
-            "Please select a satisfaction rating.";
+//     const name =
+//         document.getElementById("name").value.trim();
 
-        return;
-    }
+//     const requirements =
+//         document.getElementById("requirements").value.trim();
 
-
-    const satisfaction =
-        selectedRating.value;
-
-
-    /* Disable button */
-
-    submitButton.disabled = true;
-
-    submitButton.textContent = "Submitting...";
-
-    formMessage.textContent = "";
+//     const selectedRating =
+//         document.querySelector(
+//             'input[name="satisfaction"]:checked'
+//         );
 
 
-    /* Data */
+//     /* Check rating */
 
-    const data = {
+//     if (!selectedRating) {
 
-        email: email,
+//         formMessage.textContent =
+//             "Please select a satisfaction rating.";
 
-        name: name,
-
-        requirements: requirements,
-
-        satisfaction: satisfaction
-
-    };
+//         return;
+//     }
 
 
-    /* Send to Google Apps Script */
-
-    fetch(
-        "https://script.google.com/macros/s/AKfycbzY8IvDBlPyPcOnY9q-T59kwuk1OtYHD0-AyQOVcyL2kUPXmBPNDQgbR1is__ukeojW/exec",
-        {
-            method: "POST",
-
-            mode: "no-cors",
-
-            body: JSON.stringify(data)
-        }
-    )
-
-    .then(function () {
-
-        /* Success */
-
-        formMessage.textContent =
-            "✓ Thank you! Your response has been submitted.";
-
-        formMessage.style.color = "green";
+//     const satisfaction =
+//         selectedRating.value;
 
 
-        /* Clear form */
+//     /* Disable button */
 
-        contactForm.reset();
+//     submitButton.disabled = true;
 
+//     submitButton.textContent = "Submitting...";
 
-        /* Restore button */
-
-        submitButton.disabled = false;
-
-        submitButton.textContent = "Submit";
-
-    })
-
-    .catch(function (error) {
-
-        console.error(error);
+//     formMessage.textContent = "";
 
 
-        formMessage.textContent =
-            "Something went wrong. Please try again.";
+//     /* Data */
 
-        formMessage.style.color = "red";
+//     const data = {
+
+//         email: email,
+
+//         name: name,
+
+//         requirements: requirements,
+
+//         satisfaction: satisfaction
+
+//     };
 
 
-        submitButton.disabled = false;
+//     /* Send to Google Apps Script */
 
-        submitButton.textContent = "Submit";
+//     fetch(
+//         "https://script.google.com/macros/s/AKfycbzY8IvDBlPyPcOnY9q-T59kwuk1OtYHD0-AyQOVcyL2kUPXmBPNDQgbR1is__ukeojW/exec",
+//         {
+//             method: "POST",
 
-    });
+//             mode: "no-cors",
 
-});
+//             body: JSON.stringify(data)
+//         }
+//     )
+
+//     .then(function () {
+
+//         /* Success */
+
+//         formMessage.textContent =
+//             "✓ Thank you! Your response has been submitted.";
+
+//         formMessage.style.color = "green";
+
+
+//         /* Clear form */
+
+//         contactForm.reset();
+
+
+//         /* Restore button */
+
+//         submitButton.disabled = false;
+
+//         submitButton.textContent = "Submit";
+
+//     })
+
+//     .catch(function (error) {
+
+//         console.error(error);
+
+
+//         formMessage.textContent =
+//             "Something went wrong. Please try again.";
+
+//         formMessage.style.color = "red";
+
+
+//         submitButton.disabled = false;
+
+//         submitButton.textContent = "Submit";
+
+//     });
+
+// });
 
 
   </script>
