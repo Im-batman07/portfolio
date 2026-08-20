@@ -1023,72 +1023,340 @@
     }
 
 
-    .contact-form {
-      max-width: 600px;
-      margin: 40px auto;
-      padding: 30px;
-      border-radius: 15px;
-      background: white;
-      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+    /* ==============================
+   CONTACT FORM
+   ============================== */
+
+.contact-section {
+    width: 100%;
+    padding: 60px 20px;
+    box-sizing: border-box;
+}
+
+
+.contact-form {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+
+    padding: 35px;
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.10);
+}
+
+
+/* Heading */
+
+.contact-form h2 {
+    margin: 0 0 10px;
+
+    text-align: center;
+
+    font-size: 32px;
+}
+
+
+.form-description {
+    margin: 0 0 30px;
+
+    text-align: center;
+
+    color: #666;
+
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* Form group */
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+
+/* Labels */
+
+.form-group > label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+
+.form-group label span {
+    color: red;
+}
+
+
+/* Input + textarea */
+
+.form-group input[type="email"],
+.form-group input[type="text"],
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 13px 15px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #d5d5d5;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    font-family: inherit;
+
+    transition: 0.2s;
+}
+
+
+.form-group textarea {
+    resize: vertical;
+
+    min-height: 130px;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+
+    border-color: #555;
+
+    box-shadow:
+        0 0 0 3px rgba(0, 0, 0, 0.06);
+}
+
+
+/* Placeholder */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #999;
+}
+
+
+/* ==============================
+   STAR RATING
+   ============================== */
+
+.rating {
+
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin-top: 10px;
+}
+
+
+.rating-option {
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 60px;
+    height: 60px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.rating-option:hover {
+
+    transform: translateY(-2px);
+
+    border-color: #777;
+}
+
+
+/* Hide radio */
+
+.rating-option input {
+
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+/* Star */
+
+.rating-option span {
+
+    font-size: 25px;
+
+    line-height: 25px;
+
+    color: #bbb;
+
+    transition: 0.2s;
+}
+
+
+/* Number */
+
+.rating-option small {
+
+    font-size: 11px;
+
+    color: #777;
+}
+
+
+/* Selected */
+
+.rating-option:has(input:checked) {
+
+    border-color: #333;
+
+    background: #f5f5f5;
+}
+
+
+.rating-option:has(input:checked) span {
+
+    color: #f5b400;
+}
+
+
+/* ==============================
+   SUBMIT BUTTON
+   ============================== */
+
+#submitButton {
+
+    width: 100%;
+
+    padding: 14px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #222;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+#submitButton:hover {
+
+    background: #444;
+
+    transform: translateY(-1px);
+}
+
+
+#submitButton:disabled {
+
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* ==============================
+   SUCCESS / ERROR MESSAGE
+   ============================== */
+
+#formMessage {
+
+    margin: 18px 0 0;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    min-height: 20px;
+}
+
+
+/* ==============================
+   MOBILE
+   ============================== */
+
+@media (max-width: 600px) {
+
+    .contact-section {
+        padding: 35px 15px;
     }
+
+
+    .contact-form {
+
+        padding: 25px 20px;
+
+        border-radius: 14px;
+    }
+
 
     .contact-form h2 {
-      text-align: center;
-      margin-bottom: 25px;
+
+        font-size: 26px;
     }
 
-    .contact-form label {
-      display: block;
-      margin: 15px 0 7px;
-      font-weight: 600;
+
+    .rating {
+
+        gap: 8px;
     }
 
-    .contact-form input[type="email"],
-    .contact-form input[type="text"],
-    .contact-form textarea {
-      width: 100%;
-      padding: 12px;
-      box-sizing: border-box;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 16px;
+
+    .rating-option {
+
+        width: 52px;
+        height: 52px;
     }
 
-    .contact-form textarea {
-      resize: vertical;
+
+    .rating-option span {
+
+        font-size: 21px;
     }
 
-    .stars {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .stars label {
-      font-weight: normal;
-      margin: 5px 0;
-    }
-
-    .contact-form button {
-      width: 100%;
-      margin-top: 25px;
-      padding: 13px;
-      border: none;
-      border-radius: 8px;
-      background: #333;
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .contact-form button:hover {
-      opacity: 0.85;
-    }
-
-    #formMessage {
-      text-align: center;
-      margin-top: 15px;
-    }
+}
   </style>
 </head>
 
@@ -1294,57 +1562,147 @@
 
   <!-- <iframe class="form" src="https://docs.google.com/forms/d/e/1FAIpQLSeOL6Y_oUozgEkHpFpsf8Ny6wLBwI3s8amsheFmyFyHaOw4mA/viewform?embedded=true" width="450" height="650" frameborder="0" marginheight="0" marginwidth="0"></iframe> -->
 
-  <div class="contact-form">
+  <section class="contact-section">
 
-    <h2>Contact Me</h2>
+    <div class="contact-form">
 
-    <form id="contactForm">
+        <h2>Contact Me</h2>
+        <p class="form-description">
+            Have any requirements or questions? Send them to me below.
+        </p>
 
-      <label>Email</label>
-      <input type="email" id="email" required>
+        <form id="contactForm">
 
-      <label>Name</label>
-      <input type="text" id="name" required>
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">
+                    Email <span>*</span>
+                </label>
 
-      <label>Requirements</label>
-      <textarea id="requirements" rows="5" required></textarea>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
+            </div>
 
-      <label>Satisfaction</label>
 
-      <div class="stars">
-        <label>
-          <input type="radio" name="satisfaction" value="1" required>
-          1 ⭐
-        </label>
+            <!-- Name -->
+            <div class="form-group">
+                <label for="name">
+                    Name <span>*</span>
+                </label>
 
-        <label>
-          <input type="radio" name="satisfaction" value="2">
-          2 ⭐
-        </label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                >
+            </div>
 
-        <label>
-          <input type="radio" name="satisfaction" value="3">
-          3 ⭐
-        </label>
 
-        <label>
-          <input type="radio" name="satisfaction" value="4">
-          4 ⭐
-        </label>
+            <!-- Requirements -->
+            <div class="form-group">
+                <label for="requirements">
+                    Requirements <span>*</span>
+                </label>
 
-        <label>
-          <input type="radio" name="satisfaction" value="5">
-          5 ⭐
-        </label>
-      </div>
+                <textarea
+                    id="requirements"
+                    name="requirements"
+                    placeholder="Tell me your requirements..."
+                    rows="6"
+                    required
+                ></textarea>
+            </div>
 
-      <button type="submit">Submit</button>
 
-      <p id="formMessage"></p>
+            <!-- Satisfaction -->
+            <div class="form-group">
 
-    </form>
+                <label>
+                    Satisfaction <span>*</span>
+                </label>
 
-  </div>
+                <div class="rating">
+
+                    <label class="rating-option">
+                        <input
+                            type="radio"
+                            name="satisfaction"
+                            value="1"
+                            required
+                        >
+                        <span>★</span>
+                        <small>1</small>
+                    </label>
+
+                    <label class="rating-option">
+                        <input
+                            type="radio"
+                            name="satisfaction"
+                            value="2"
+                        >
+                        <span>★</span>
+                        <small>2</small>
+                    </label>
+
+                    <label class="rating-option">
+                        <input
+                            type="radio"
+                            name="satisfaction"
+                            value="3"
+                        >
+                        <span>★</span>
+                        <small>3</small>
+                    </label>
+
+                    <label class="rating-option">
+                        <input
+                            type="radio"
+                            name="satisfaction"
+                            value="4"
+                        >
+                        <span>★</span>
+                        <small>4</small>
+                    </label>
+
+                    <label class="rating-option">
+                        <input
+                            type="radio"
+                            name="satisfaction"
+                            value="5"
+                        >
+                        <span>★</span>
+                        <small>5</small>
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- Submit -->
+            <button
+                type="submit"
+                id="submitButton"
+            >
+                Submit
+            </button>
+
+
+            <!-- Message -->
+            <p id="formMessage"></p>
+
+        </form>
+
+    </div>
+
+</section>
 
   <!-- Chatbot Widget -->
   <div class="chatbot-widget">
@@ -1547,38 +1905,129 @@
       const modal = document.getElementById('projectsModal');
       if (modal) modal.classList.remove('active');
     }
+//contact form
+    const contactForm = document.getElementById("contactForm");
 
-    const form = document.getElementById("contactForm");
+const submitButton = document.getElementById("submitButton");
 
-    form.addEventListener("submit", function (e) {
+const formMessage = document.getElementById("formMessage");
 
-      e.preventDefault();
 
-      const email = document.getElementById("email").value;
-      const name = document.getElementById("name").value;
-      const requirements = document.getElementById("requirements").value;
-      const satisfaction =
-        document.querySelector('input[name="satisfaction"]:checked').value;
+contactForm.addEventListener("submit", function (event) {
 
-      const data = {
+    event.preventDefault();
+
+
+    /* Get values */
+
+    const email =
+        document.getElementById("email").value.trim();
+
+    const name =
+        document.getElementById("name").value.trim();
+
+    const requirements =
+        document.getElementById("requirements").value.trim();
+
+    const selectedRating =
+        document.querySelector(
+            'input[name="satisfaction"]:checked'
+        );
+
+
+    /* Check rating */
+
+    if (!selectedRating) {
+
+        formMessage.textContent =
+            "Please select a satisfaction rating.";
+
+        return;
+    }
+
+
+    const satisfaction =
+        selectedRating.value;
+
+
+    /* Disable button */
+
+    submitButton.disabled = true;
+
+    submitButton.textContent = "Submitting...";
+
+    formMessage.textContent = "";
+
+
+    /* Data */
+
+    const data = {
+
         email: email,
+
         name: name,
+
         requirements: requirements,
+
         satisfaction: satisfaction
-      };
 
-      fetch("https://script.google.com/macros/s/AKfycbxWQxY16cAgWeKX-X37o5iXrdaGX4o1m5GrEe2cJ_ldU7jEieDyNoxU_XDw9EThXGfe/exec", {
-        method: "POST",
-        mode: "no-cors",
-        body: JSON.stringify(data)
-      });
+    };
 
-      document.getElementById("formMessage").innerText =
-        "Thank you! Your response has been submitted.";
 
-      form.reset();
+    /* Send to Google Apps Script */
+
+    fetch(
+        "https://script.google.com/macros/s/AKfycbz13NvD4Ck_cB06ij7IPH9G_muctB5bVlFldgQLDPh3__X_F9Ymx3Uaa69iunMFnkg/exec",
+        {
+            method: "POST",
+
+            mode: "no-cors",
+
+            body: JSON.stringify(data)
+        }
+    )
+
+    .then(function () {
+
+        /* Success */
+
+        formMessage.textContent =
+            "✓ Thank you! Your response has been submitted.";
+
+        formMessage.style.color = "green";
+
+
+        /* Clear form */
+
+        contactForm.reset();
+
+
+        /* Restore button */
+
+        submitButton.disabled = false;
+
+        submitButton.textContent = "Submit";
+
+    })
+
+    .catch(function (error) {
+
+        console.error(error);
+
+
+        formMessage.textContent =
+            "Something went wrong. Please try again.";
+
+        formMessage.style.color = "red";
+
+
+        submitButton.disabled = false;
+
+        submitButton.textContent = "Submit";
 
     });
+
+});
 
 
   </script>
