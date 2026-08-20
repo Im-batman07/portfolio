@@ -5,11 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dev Portfolio | Web Developer</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Styles -->
+</head>
+
+<head>
   <style>
     /* AMOLED Dark Theme Variables */
     :root {
@@ -63,13 +61,23 @@
     }
 
     @keyframes rotateA {
-      0% { transform: rotateY(0deg); }
-      100% { transform: rotateY(360deg); }
+      0% {
+        transform: rotateY(0deg);
+      }
+
+      100% {
+        transform: rotateY(360deg);
+      }
     }
 
     @keyframes glow {
-      from { text-shadow: 0 0 10px var(--accent-color); }
-      to { text-shadow: 0 0 30px var(--accent-color), 0 0 10px var(--accent-secondary); }
+      from {
+        text-shadow: 0 0 10px var(--accent-color);
+      }
+
+      to {
+        text-shadow: 0 0 30px var(--accent-color), 0 0 10px var(--accent-secondary);
+      }
     }
 
     /* Three.js Background */
@@ -157,7 +165,7 @@
       font-size: 3rem;
       margin-bottom: 3rem;
       background: linear-gradient(45deg, var(--accent-color), var(--accent-secondary));
-      -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -748,7 +756,8 @@
         height: 250px;
         width: 100%;
       }
-      .img :hover{
+
+      .img :hover {
         height: 2500px;
         width: 1000px;
       }
@@ -1012,6 +1021,74 @@
         height: 500px;
       }
     }
+
+
+    .contact-form {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 15px;
+      background: white;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .contact-form h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .contact-form label {
+      display: block;
+      margin: 15px 0 7px;
+      font-weight: 600;
+    }
+
+    .contact-form input[type="email"],
+    .contact-form input[type="text"],
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+    }
+
+    .stars {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .stars label {
+      font-weight: normal;
+      margin: 5px 0;
+    }
+
+    .contact-form button {
+      width: 100%;
+      margin-top: 25px;
+      padding: 13px;
+      border: none;
+      border-radius: 8px;
+      background: #333;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      opacity: 0.85;
+    }
+
+    #formMessage {
+      text-align: center;
+      margin-top: 15px;
+    }
   </style>
 </head>
 
@@ -1087,7 +1164,7 @@
         <p>Semantic & Modern</p>
       </div>
       <div class="skill-card" data-lang="css">
-       
+
         <h3>C</h3>
         <p>System Programming</p>
       </div>
@@ -1143,7 +1220,8 @@
               <span class="tech-badge css-badge">CSS</span>
               <span class="tech-badge js-badge">JS</span>
             </div>
-            <a href="https://stone-paper-scissors-topaz.vercel.app/" target="_blank" class="project-link">View Project →</a>
+            <a href="https://stone-paper-scissors-topaz.vercel.app/" target="_blank" class="project-link">View Project
+              →</a>
           </div>
         </div>
 
@@ -1192,7 +1270,7 @@
     </div>
   </div>
 
-  <!-- Contact Section -->
+  <!-- Contact Section
   <section id="contact">
     <h2>Contact Me</h2>
     <div class="contact-container">
@@ -1212,31 +1290,83 @@
         <p style="color:#666; margin-top:2rem;">
           Use the form to send me a direct message.
         </p>
+      </div> -->
+
+  <!-- <iframe class="form" src="https://docs.google.com/forms/d/e/1FAIpQLSeOL6Y_oUozgEkHpFpsf8Ny6wLBwI3s8amsheFmyFyHaOw4mA/viewform?embedded=true" width="450" height="650" frameborder="0" marginheight="0" marginwidth="0"></iframe> -->
+
+  <div class="contact-form">
+
+    <h2>Contact Me</h2>
+
+    <form id="contactForm">
+
+      <label>Email</label>
+      <input type="email" id="email" required>
+
+      <label>Name</label>
+      <input type="text" id="name" required>
+
+      <label>Requirements</label>
+      <textarea id="requirements" rows="5" required></textarea>
+
+      <label>Satisfaction</label>
+
+      <div class="stars">
+        <label>
+          <input type="radio" name="satisfaction" value="1" required>
+          1 ⭐
+        </label>
+
+        <label>
+          <input type="radio" name="satisfaction" value="2">
+          2 ⭐
+        </label>
+
+        <label>
+          <input type="radio" name="satisfaction" value="3">
+          3 ⭐
+        </label>
+
+        <label>
+          <input type="radio" name="satisfaction" value="4">
+          4 ⭐
+        </label>
+
+        <label>
+          <input type="radio" name="satisfaction" value="5">
+          5 ⭐
+        </label>
       </div>
 
-      <iframe class="form" src="https://docs.google.com/forms/d/e/1FAIpQLSeOL6Y_oUozgEkHpFpsf8Ny6wLBwI3s8amsheFmyFyHaOw4mA/viewform?embedded=true" width="450" height="650" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+      <button type="submit">Submit</button>
 
-      <!-- Chatbot Widget -->
-      <div class="chatbot-widget">
-        <button id="chat-toggle" class="chat-toggle">
-          <i class="fas fa-comment-dots" style="font-size: 1.5rem; color: #000;"></i>
-        </button>
+      <p id="formMessage"></p>
 
-        <div id="chat-window" class="chat-window">
-          <div class="chat-header">
-            <h3>Chat Assistant</h3>
-            <i id="close-chat" class="fas fa-times" style="cursor:pointer; color:#fff;"></i>
-          </div>
-          <div id="chat-messages" class="chat-messages">
-            <div class="message bot">Hello! I am an AI assistant. Ask me about the developer's skills or projects!</div>
-          </div>
-          <div class="chat-input-area">
-            <input type="text" id="chat-input" placeholder="Type a message...">
-            <button id="chat-send" class="chat-send"><i class="fas fa-paper-plane"></i></button>
-          </div>
-        </div>
+    </form>
+
+  </div>
+
+  <!-- Chatbot Widget -->
+  <div class="chatbot-widget">
+    <button id="chat-toggle" class="chat-toggle">
+      <i class="fas fa-comment-dots" style="font-size: 1.5rem; color: #000;"></i>
+    </button>
+
+    <div id="chat-window" class="chat-window">
+      <div class="chat-header">
+        <h3>Chat Assistant</h3>
+        <i id="close-chat" class="fas fa-times" style="cursor:pointer; color:#fff;"></i>
+      </div>
+      <div id="chat-messages" class="chat-messages">
+        <div class="message bot">Hello! I am an AI assistant. Ask me about the developer's skills or projects!</div>
+      </div>
+      <div class="chat-input-area">
+        <input type="text" id="chat-input" placeholder="Type a message...">
+        <button id="chat-send" class="chat-send"><i class="fas fa-paper-plane"></i></button>
       </div>
     </div>
+  </div>
+  </div>
   </section>
 
   <!-- Scripts -->
@@ -1417,6 +1547,40 @@
       const modal = document.getElementById('projectsModal');
       if (modal) modal.classList.remove('active');
     }
+
+    const form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", function (e) {
+
+      e.preventDefault();
+
+      const email = document.getElementById("email").value;
+      const name = document.getElementById("name").value;
+      const requirements = document.getElementById("requirements").value;
+      const satisfaction =
+        document.querySelector('input[name="satisfaction"]:checked').value;
+
+      const data = {
+        email: email,
+        name: name,
+        requirements: requirements,
+        satisfaction: satisfaction
+      };
+
+      fetch("https://script.google.com/macros/s/AKfycbxWQxY16cAgWeKX-X37o5iXrdaGX4o1m5GrEe2cJ_ldU7jEieDyNoxU_XDw9EThXGfe/exec", {
+        method: "POST",
+        mode: "no-cors",
+        body: JSON.stringify(data)
+      });
+
+      document.getElementById("formMessage").innerText =
+        "Thank you! Your response has been submitted.";
+
+      form.reset();
+
+    });
+
+
   </script>
 </body>
 
