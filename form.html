@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<head>
+    <style>
+        .contact-section {
+            width: 100%;
+            padding: 60px 20px;
+            box-sizing: border-box;
+        }
+
+
+        .contact-form {
+            width: 100%;
+            max-width: 650px;
+            margin: 0 auto;
+
+            padding: 35px;
+            box-sizing: border-box;
+
+            background: #ffffff;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 10px 35px rgba(0, 0, 0, 0.10);
+        }
+
+
+        /* Heading */
+
+        .contact-form h2 {
+            margin: 0 0 10px;
+
+            text-align: center;
+
+            font-size: 32px;
+        }
+
+
+        .form-description {
+            margin: 0 0 30px;
+
+            text-align: center;
+
+            color: #666;
+
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+
+        /* Form group */
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+
+        /* Labels */
+
+        .form-group>label {
+            display: block;
+
+            margin-bottom: 8px;
+
+            font-size: 15px;
+
+            font-weight: 600;
+        }
+
+
+        .form-group label span {
+            color: red;
+        }
+
+
+        /* Input + textarea */
+
+        .form-group input[type="email"],
+        .form-group input[type="text"],
+        .form-group textarea {
+
+            width: 100%;
+
+            padding: 13px 15px;
+
+            box-sizing: border-box;
+
+            border: 1px solid #d5d5d5;
+
+            border-radius: 8px;
+
+            outline: none;
+
+            font-size: 15px;
+
+            font-family: inherit;
+
+            transition: 0.2s;
+        }
+
+
+        .form-group textarea {
+            resize: vertical;
+
+            min-height: 130px;
+        }
+
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+
+            border-color: #555;
+
+            box-shadow:
+                0 0 0 3px rgba(0, 0, 0, 0.06);
+        }
+
+
+        /* Placeholder */
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #999;
+        }
+
+
+        /* ==============================
+   STAR RATING
+   ============================== */
+
+        .rating {
+
+            display: flex;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+
+            margin-top: 10px;
+        }
+
+
+        .rating-option {
+
+            position: relative;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            width: 60px;
+            height: 60px;
+
+            border: 1px solid #ddd;
+
+            border-radius: 10px;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+
+
+        .rating-option:hover {
+
+            transform: translateY(-2px);
+
+            border-color: #777;
+        }
+
+
+        /* Hide radio */
+
+        .rating-option input {
+
+            position: absolute;
+
+            opacity: 0;
+
+            pointer-events: none;
+        }
+
+
+        /* Star */
+
+        .rating-option span {
+
+            font-size: 25px;
+
+            line-height: 25px;
+
+            color: #bbb;
+
+            transition: 0.2s;
+        }
+
+
+        /* Number */
+
+        .rating-option small {
+
+            font-size: 11px;
+
+            color: #777;
+        }
+
+
+        /* Selected */
+
+        .rating-option:has(input:checked) {
+
+            border-color: #333;
+
+            background: #f5f5f5;
+        }
+
+
+        .rating-option:has(input:checked) span {
+
+            color: #f5b400;
+        }
+
+
+        /* ==============================
+   SUBMIT BUTTON
+   ============================== */
+
+        #submitButton {
+
+            width: 100%;
+
+            padding: 14px 20px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background: #222;
+
+            color: white;
+
+            font-size: 16px;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+
+
+        #submitButton:hover {
+
+            background: #444;
+
+            transform: translateY(-1px);
+        }
+
+
+        #submitButton:disabled {
+
+            opacity: 0.6;
+
+            cursor: not-allowed;
+
+            transform: none;
+        }
+
+
+        /* ==============================
+   SUCCESS / ERROR MESSAGE
+   ============================== */
+
+        #formMessage {
+
+            margin: 18px 0 0;
+
+            text-align: center;
+
+            font-size: 14px;
+
+            min-height: 20px;
+        }
+
+
+        /* ==============================
+   MOBILE
+   ============================== */
+
+        @media (max-width: 600px) {
+
+            .contact-section {
+                padding: 35px 15px;
+            }
+
+
+            .contact-form {
+
+                padding: 25px 20px;
+
+                border-radius: 14px;
+            }
+
+
+            .contact-form h2 {
+
+                font-size: 26px;
+            }
+
+
+            .rating {
+
+                gap: 8px;
+            }
+
+
+            .rating-option {
+
+                width: 52px;
+                height: 52px;
+            }
+
+
+            .rating-option span {
+
+                font-size: 21px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <section class="contact-section">
+
+        <div class="contact-form">
+
+            <h2>Contact Me</h2>
+            <p class="form-description">
+                Have any requirements or questions? Send them to me below.
+            </p>
+
+            <form id="contactForm">
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label>Email *</label>
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+
+                <!-- Name -->
+                <div class="form-group">
+                    <label>Name *</label>
+                    <input type="text" name="name" placeholder="Enter your name" required>
+                </div>
+
+
+                <!-- Requirements -->
+                <div class="form-group">
+                    <label>Requirements *</label>
+                    <textarea name="requirements" placeholder="Tell me your requirements..." required></textarea>
+                </div>
+
+
+                <!-- Satisfaction -->
+                <div class="form-group">
+
+                    <input type="hidden" name="satisfaction" id="satisfaction">
+
+                    <div class="rating">
+
+                        <label class="rating-option">
+                            <input type="radio" name="satisfaction" value="1" required>
+                            <span>★</span>
+                            <small>1</small>
+                        </label>
+
+                        <label class="rating-option">
+                            <input type="radio" name="satisfaction" value="2">
+                            <span>★</span>
+                            <small>2</small>
+                        </label>
+
+                        <label class="rating-option">
+                            <input type="radio" name="satisfaction" value="3">
+                            <span>★</span>
+                            <small>3</small>
+                        </label>
+
+                        <label class="rating-option">
+                            <input type="radio" name="satisfaction" value="4">
+                            <span>★</span>
+                            <small>4</small>
+                        </label>
+
+                        <label class="rating-option">
+                            <input type="radio" name="satisfaction" value="5">
+                            <span>★</span>
+                            <small>5</small>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Submit -->
+                <button type="submit" id="submitButton">
+                    Submit
+                </button>
+
+
+                <!-- Message -->
+                <p id="formMessage"></p>
+
+            </form>
+
+        </div>
+
+    </section>
+    <script>
+
+        const form = document.getElementById("contactForm");
+
+        form.addEventListener("submit", function (event) {
+
+            // Stop the browser from refreshing the page.
+            event.preventDefault();
+
+            // Collect all inputs that have a name attribute.
+            const formData = new FormData(form);
+
+            // Convert the form data into normal key=value data.
+            const data = new URLSearchParams(formData);
+
+            // Send the data to Google Apps Script.
+            fetch("https://script.google.com/macros/s/AKfycbxU8MVqc1TzAgHniQ0b7oCIT7fCO-9cNWcoLlkri19issGjERAHxAu4E8yRkPCEkMeH/exec", {
+                method: "POST",
+                body: data,
+                mode: "no-cors"
+            });
+
+            // Show confirmation.
+            alert("Form submitted successfully!");
+
+            // Clear the form.
+            form.reset();
+
+        });
+    </script>
+</body>
+
+</html>
