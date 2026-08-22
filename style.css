@@ -1,4 +1,4 @@
-    /* AMOLED Dark Theme Variables */
+        /* AMOLED Dark Theme Variables */
     :root {
       --bg-color: #000000;
       --card-bg: #121212;
@@ -1013,4 +1013,15 @@
 iframe{
   width: 100%;
   min-height: 850px;
+}
+/* ===== FULL-PAGE SCROLL SNAP EFFECT ===== */
+/* Makes the page snap from one section to the next. */
+html {
+  scroll-snap-type: y mandatory;
+}
+
+/* Each section is a scroll-snap point. */
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
