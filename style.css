@@ -22,3 +22,10 @@
   .hero-visual:after{content:"WEB · DATABASE · SYSTEMS";position:absolute;left:50%;bottom:24px;transform:translateX(-50%);z-index:4;width:max-content;padding:8px 12px;border:1px solid rgba(215,201,255,.2);border-radius:999px;background:rgba(17,16,43,.68);backdrop-filter:blur(12px);font-family:var(--mono);font-size:.47rem;letter-spacing:.08em;color:#c9c1df}
 }
 @media(min-width:681px){.bottom-nav{display:none!important}}
+
+.hero-badge{position:absolute;top:14%;right:3%;z-index:4;font-family:var(--mono);font-size:.52rem;letter-spacing:.08em;color:#d9cfff;padding:9px 12px;border:1px solid rgba(215,201,255,.22);border-radius:999px;background:rgba(20,18,50,.62);backdrop-filter:blur(14px);box-shadow:0 12px 35px rgba(4,3,20,.25)}
+.hero-orbit{position:absolute;width:500px;height:500px;border:1px solid rgba(178,151,255,.14);border-radius:50%;z-index:0;pointer-events:none}
+.hero-orbit:before{content:"";position:absolute;inset:70px;border:1px dashed rgba(215,201,255,.1);border-radius:50%}
+.hero-orbit span{position:absolute;width:7px;height:7px;border-radius:50%;background:var(--lav);box-shadow:0 0 18px var(--lav)}
+.hero-orbit span:nth-child(1){left:18%;top:23%}.hero-orbit span:nth-child(2){right:11%;top:48%}.hero-orbit span:nth-child(3){left:31%;bottom:9%}
+@media(max-width:680px){.hero-badge{top:7%;right:0;font-size:.45rem}.hero-orbit{width:390px;height:390px}.hero-orbit:before{inset:55px}}
